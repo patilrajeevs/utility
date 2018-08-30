@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "../geometry/geometry.cpp"
 
 using namespace cv;
 using namespace std;
@@ -75,4 +76,14 @@ class OpencvHelper{
       bitwise_and(image, mask, dest);
       return dest;
     }
+
+    static vector <vector<Vec4i> > grouplines(const vector<Vec4i> &lines, int no_groups){
+      for (vector<Vec4i>::iterator it = lines.begin(); it != lines.end(); ++it){
+        float slope = Geometry::getSlope(*it);
+      }
+      vector<vector<Vec4i> > grouped_lines;
+      return grouped_lines;
+    }
+
+
 };
