@@ -3,15 +3,17 @@
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-
-#include <cv.h>
-#include <highgui.h>
 #include <opencv2/imgproc/imgproc.hpp>
+
+//#include <opencv2/opencv.hpp>
+//#include <opencv2/highgui.hpp>
+//#include <cv.h>
+//#include <highgui.hpp>
 
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../geometry/geometry.h"
+#include "geometry_helper.h"
 
 using namespace std;
 using namespace cv;
@@ -19,6 +21,7 @@ using namespace cv;
 class OpencvHelper{
 public:
     static void display(const Mat &image, string window_name = "Display window");
+    void display_temp();
     static void display_file(const string &path);
     static Mat convertColor(const Mat &image, int code);
     static Mat convertToGrayScale(const Mat &image);

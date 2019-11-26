@@ -1,4 +1,5 @@
 #include "opencv_helper.h"
+#include <opencv2/imgproc/types_c.h>
 
 using namespace cv;
 using namespace std;
@@ -62,6 +63,10 @@ Mat OpencvHelper::getRoI(const Mat &image,vector <vector<Point> > pts){
   fillPoly(mask, pts, Scalar(255,255,255));
   bitwise_and(image, mask, dest);
   return dest;
+}
+
+void OpencvHelper::display_temp(){
+    cout << "Printed" << endl;
 }
 
 /*
